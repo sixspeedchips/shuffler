@@ -13,6 +13,11 @@ public class Main {
 
     System.out.println(Arrays.toString(deck));
 
+
+    String[] data = (new String[]{"The quick brown fox jumped of the lazy dog"})[0].split(" ");
+    Object[] dataTwo = { 1, new String("World"), 10L };
+    System.out.println(((Integer) dataTwo[0]).doubleValue());
+
     shuffler.shuffle(deck);
     System.out.println();
     System.out.println(Arrays.toString(deck));

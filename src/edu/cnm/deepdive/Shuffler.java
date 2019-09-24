@@ -3,7 +3,7 @@ package edu.cnm.deepdive;
 import java.util.Random;
 
 
-public class Shuffler<E> {
+public class Shuffler {
 
   private final Random random;
 
@@ -11,16 +11,16 @@ public class Shuffler<E> {
     this.random = random;
   }
 
-  void shuffle(E[] array){
+  public <T> void shuffle(T[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int nextInt=random.nextInt(i+1);
-      E temp = array[i];
+      T temp = array[i];
       array[i]=array[nextInt];
       array[nextInt]=temp;
     }
   }
 
-  void shuffle(int[] array){
+  public void shuffle(int[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       int temp = array[i];
@@ -30,7 +30,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(double[] array){
+  public void shuffle(double[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       double temp = array[i];
@@ -40,7 +40,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(float[] array){
+  public void shuffle(float[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       float temp = array[i];
@@ -50,7 +50,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(char[] array){
+  public void shuffle(char[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       char temp = array[i];
@@ -60,7 +60,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(byte[] array){
+  public void shuffle(byte[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       byte temp = array[i];
@@ -70,7 +70,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(long[] array){
+  public void shuffle(long[] array){
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i+1);
       long temp = array[i];
@@ -80,7 +80,7 @@ public class Shuffler<E> {
 
   }
 
-  void shuffle(short[] array) {
+  public void shuffle(short[] array) {
     for (int i = array.length - 1; i >= 0; i--) {
       int swap = random.nextInt(i + 1);
       short temp = array[i];
